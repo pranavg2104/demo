@@ -1,7 +1,4 @@
 from flask import Flask,json,jsonify
-#from flask_restful import Api, Resource
-
-app=Flask(__name__)
   
 @app.route("/")
 def getEmployeeList():
@@ -16,7 +13,3 @@ def getEmployeeList():
         # convert to json data
         jsonStr = json.dumps(employeeList)
     return jsonify(Employees=jsonStr)
-
-if __name__=='__main__':
-    app.run(debug=True)
-#new commit 
